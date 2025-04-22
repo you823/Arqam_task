@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 const FinancialSection = () => {
     const { t, i18n } = useTranslation();
     const [data, setData] = useState([]);
+    console.log(data);
+    
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [activeCurrency, setActiveCurrency] = useState('SAR');
@@ -41,7 +43,6 @@ const FinancialSection = () => {
         numValue = numValue / exchangeRate;
       }
       
-      // Format all numbers to show exactly 2 decimal places
       return numValue.toLocaleString(undefined, {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
