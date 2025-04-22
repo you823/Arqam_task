@@ -4,6 +4,7 @@ import './navbar.css';
 import menuItems from '/src/assets/data/menuItems.json';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import logo from "../../../assets/logo.png";
 
 const NavbarComp = () => {
   const { t, i18n } = useTranslation();
@@ -32,7 +33,7 @@ const NavbarComp = () => {
           <Link to="https://www.eic.com.sa/" target='_blank' className='navbar-logo'>
             <img 
               style={{height: "90px"}} 
-              src='/src/assets/logo.png' 
+              src={logo}
               alt={t('logoAlt')} 
               loading='lazy' 
               className='img-fluid'
