@@ -28,13 +28,13 @@ const TickerBar = () => {
     },
     {
       labelEn: "High",
-      labelAr: "أعلى سعر",
+      labelAr: "الأعلى",
       value: "7.05",
       change: "up"
     },
     {
       labelEn: "Low",
-      labelAr: "أقل سعر",
+      labelAr: "الأدنى",
       value: "6.93",
       change: "up"
     },
@@ -52,13 +52,13 @@ const TickerBar = () => {
     },
     {
       typeEn: "news",
-      typeAr: "أخبار",
+      typeAr: "الأخبار",
       contentEn: "Tadawul: 39 stocks record strong gains from intraday lows",
       contentAr: "تداول: 39 سهمًا تسجل مكاسب قوية من أدنى مستوياتها خلال اليوم"
     },
     {
       typeEn: "calendar",
-      typeAr: "التقويم",
+      typeAr: "مفكره",
       eventEn: "General Assembly",
       eventAr: "الجمعية العامة",
       date: "08-05-2025"
@@ -99,7 +99,7 @@ const TickerBar = () => {
                         color: "white"
                       }}
                     >
-                      {currentLang === 'ar' ? 'أحدث الأخبار' : 'Latest News'}
+                      {currentLang === 'ar' ? item.typeAr : item.typeEn}
                     </span>
                     {getContent(item)}
                   </>

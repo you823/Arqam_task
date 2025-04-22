@@ -23,15 +23,16 @@
 .ticker-bar ul {
   display: inline-flex;
   align-items: center;
-  padding-left: 100%;
+  padding-left: 50%;
   margin: 0;
-  animation: ticker 40s linear infinite;
+  animation: ticker 35s linear infinite;
   will-change: transform;
+  -webkit-animation: ticker 35s linear infinite;
 }
 
 [dir="rtl"] .ticker-bar ul {
   padding-left: 0;
-  padding-right: 100%;
+  padding-right: 50%;
   animation: ticker-rtl 40s linear infinite;
 }
 

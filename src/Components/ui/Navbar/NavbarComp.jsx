@@ -2,20 +2,25 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar.css';
 import menuItems from '/src/assets/data/menuItems.json';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaBars, FaTimes } from 'react-icons/fa';
 
 const NavbarComp = () => {
   const { t, i18n } = useTranslation();
+  const [searchParams,setSearchParams] = useSearchParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeLanguage = () => {
     const newLang = i18n.language === 'en' ? 'ar' : 'en';
+    
+    // Update URL
+    setSearchParams({ lang: newLang }); // Sets ?lang=ar or ?lang=en
+
+    // Change language and update DOM
     i18n.changeLanguage(newLang, () => {
-      localStorage.setItem('i18nextLng', newLang);
-      document.documentElement.lang = newLang;
-      document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+        localStorage.setItem('i18nextLng', newLang);
+        document.documentElement.lang = newLang;
+        document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
     });
   };
 
@@ -24,7 +29,7 @@ const NavbarComp = () => {
       <div className='container'>
         {/* Logo */}
         <div className='navbar-brand'>
-          <Link to="/" className='navbar-logo'>
+          <Link to="https://www.eic.com.sa/" target='_blank' className='navbar-logo'>
             <img 
               style={{height: "90px"}} 
               src='/src/assets/logo.png' 

@@ -125,3 +125,23 @@
 [dir='rtl'] .accordion-button:after {
   margin-left: 0 !important;
 }
+
+.show {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(184, 200, 218, .94) 100%) !important;
+}
+
+.modal-content{
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.modal-header{
+  background: rgb(13 110 253 / 6%);
+  border-radius: 20px 20px 0 0 !important;
+  -webkit-border-radius: 20px 20px 0 0 ;
+  -moz-border-radius: 20px 20px 0 0 ;
+  -ms-border-radius: 20px 20px 0 0 ;
+  -o-border-radius: 20px 20px 0 0 ;
+}

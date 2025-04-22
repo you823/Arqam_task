@@ -1,17 +1,12 @@
-import TickerBar from "./Components/common/TickerBar/TickerBar"
-import FinancialSection from "./Components/Financial/FinancialSection"
-import HeroSection from "./Components/HeroSection/HeroSection"
-import NavbarComp from "./Components/ui/Navbar/NavbarComp"
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from "./routes/index.jsx";
 
 function App() {
 
   return (
-    <div className="App">
-      <NavbarComp />
-      <HeroSection/>
-      <FinancialSection/>
-      <TickerBar/>
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
   )
 }
 
