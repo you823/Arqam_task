@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import "./financialSection.css";
 import { useTranslation } from 'react-i18next';
 import ChartModal from '../ui/Modals/ChartModal/ChartModal';
+import { ImSpinner3 } from 'react-icons/im';
 
 // Constants
 const EXCHANGE_RATE = 3.75;
@@ -82,7 +83,7 @@ const FinancialSection = () => {
   }, []);
 
   // Render loading, error, or empty states
-  if (loading) return <div className="text-center py-4">{t('loading')}</div>;
+  if (loading) return <div className="text-center py-4"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>;
   if (error) return <div className="alert alert-danger">{error}</div>;
   if (!data.length) return <div className="alert alert-info">{t('noDataAvailable')}</div>;
 
