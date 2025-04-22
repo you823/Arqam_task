@@ -3,7 +3,7 @@
     background-blend-mode: overlay;
     background-color: #1b2d40;
     color: #eaeaea;
-    /* margin-block-start: 100px; */
+    margin-block-start: 100px;
 }
 .hero-section .col{
     flex: 1 0 0%;

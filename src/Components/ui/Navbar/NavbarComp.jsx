@@ -25,7 +25,7 @@ const NavbarComp = () => {
   };
 
   return (
-    <nav className='navbar sticky-top navbar-expand-lg'>
+    <nav className='navbar fixed-top navbar-expand-lg'>
       <div className='container'>
         {/* Logo */}
         <div className='navbar-brand'>
